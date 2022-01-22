@@ -1,0 +1,154 @@
+*{
+  margin: 0%;
+  box-sizing: border-box;
+  padding: 0%;
+}
+
+.container{
+  height: 100vh;
+  width: 100vw;
+}
+.container h1{
+  text-align: center;
+  
+}
+.container .login{
+    display: flex;
+    justify-content:space-between;
+   color: rgb(243, 110, 14);
+   
+   
+  padding: 20px;
+}
+.container .login:hover{
+color: darkgoldenrod;
+}
+.container p{
+  text-align: center;
+  
+}
+.candidate{
+  display: flex;
+  
+  width: 100%;
+  justify-content: center;
+margin-top: 40px;
+
+
+}
+
+.electioncss{
+  
+  background-color: rgb(245, 248, 248);
+  box-shadow:  5px 0 12px rgb(245, 248, 248);
+  
+  /* background-color: cadetblue; */
+  width:50%;
+  margin: 5px 5px;
+ border-radius: 10px;
+ padding: 3px;
+  
+
+}
+.electioncss h1{
+  font-size: 20px;
+  text-align: center;
+  color: chocolate;
+}
+.electioncss button{
+  outline:none;
+  border: 0;
+color: darkgreen;
+padding: 3px;
+width: 50%;
+border-radius: 10px;
+border: 1px solid rgb(224, 138, 9);
+font-size: 25px;
+}
+.electioncss button:hover{
+  border: 1px solid green;
+  
+}
+
+
+.card {
+  display: grid;
+  place-content: center;
+  height: 340px;
+}
+.card img{
+  width: 100%;
+  height: 100%;
+}
+.transaction_container{
+  /*  */
+display: grid;
+place-content: center;
+  
+  width:100%;
+  margin-top: 40px;
+}
+@media screen and (max-width:800px) {
+  .trans_detail{
+
+
+  width:100%;
+  } 
+  .candidate{
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+   
+   
+  
+  }
+  .transaction_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* color: rgb(197, 17, 17); */
+  }
+  .trans_detail {
+    background: rgb(245, 248, 248);
+    /* background-color: 1lawngreen; */
+    word-break:break-all;
+  }
+  .trans_detail .box label{
+    width: 150px;
+  }
+}
+
+.trans_detail{
+
+  
+  
+  word-break:break-all;
+  
+  
+  padding: 2px;
+
+}
+.trans_detail .box{
+  display: flex;
+  margin: 5px 0px;
+
+  
+
+}
+.trans_detail .box label{
+  width: 150px;
+}
+
+/* .trans_detail .box label{
+  display: flex;
+  font-size: 30px;
+  
+
+}
+.trans_detail .box h3{
+  padding: 10px;
+  
+
+} */
