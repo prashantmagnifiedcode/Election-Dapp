@@ -10,8 +10,14 @@ const App = () => {
       load()
       loadblockchain()
     }
- 
-      const[account,setaccount]=useState()
+    setInterval(() => {
+      setremove(false)
+      
+    },5000);
+    
+    const[remove,setremove]=useState(true)
+      const[account,setaccount]=useState(' ')
+
       const [loading, setloading] = useState(false);
       const [tran_loading, settran_loading] = useState(false);
       const[election,setelection]=useState()
@@ -87,13 +93,20 @@ setloading(false)
       })
       settran_loading(true)
       openwallet()
-     }catch(e){console.log(e)}
+      alert('Successfully Voted')
+     }catch(e){alert('You have not Voted')}
    }
 return(
     <>
 <div class="container">
+  { remove?<span className="coverbody">
+    <h3>Welcome of India</h3>
+  </span>
+    
+    :null}
+ 
    <div className="login">
-     <h3 onClick={()=>openwallet()}>Login in Meta mask</h3>
+     <h5 onClick={()=>openwallet()}>Login in Meta mask</h5>
 
   <p>User Account:{account}</p>
 
@@ -103,12 +116,12 @@ return(
 
   
   <div className="electioncss">
-    <h1>Elecion Dapp</h1>
+    <h1>BJP</h1>
     <election className="card">
       <img src="bjp.png" alt="" srcset="" />
 
     </election>
-    <h1>BJP</h1>
+    
     <h1>{condidates1.voteCount}</h1>
     <h1>
    {
@@ -120,12 +133,12 @@ return(
   </div>
   
   <div className="electioncss">
-    <h1>Elecion Dapp</h1>
+    <h1>Congress</h1>
     <election className="card">
       <img src="congress.png" alt="" srcset="" />
 
     </election>
-    <h1>Congress</h1>
+    
       <h1>{condidates2.voteCount}</h1>
     <h1>
     {
